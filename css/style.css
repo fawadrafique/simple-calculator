@@ -20,6 +20,7 @@ body {
   width: 80px;
   font: 16px bold;
   margin: 5px;
+  padding: 2px;
 }
 #number1,
 #number2 {
