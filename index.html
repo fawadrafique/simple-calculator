@@ -3,26 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Simple Javascript Calculator</title>
   </head>
   <body>
-    <label for="number1">First number</label>
-    <input type="text" name="number1" id="number1" value="Number..." />
-    <label for="operators">Four operations</label>
-    <select name="operators" id="operators"
-      ><option value="plus">+</option
-      ><option value="minus">-</option
-      ><option value="multiply">*</option
-      ><option value="divide">/</option>
+    <h1>Calculator</h1>
+    <label for="number1" class="visually-hidden">First number</label>
+    <input
+      type="text"
+      name="number1"
+      id="number1"
+      oninput="calculate()"
+      placeholder="Number..."
+      required
+    />
+    <label for="operators" class="visually-hidden">Four operations</label>
+    <select name="operators" id="operators" oninput="calculate()"
+      ><option value="+">+</option
+      ><option value="-">-</option
+      ><option value="*">*</option
+      ><option value="/">/</option>
     </select>
-    <label for="number2">Second number</label>
-    <input type="text" name="number2" id="number2" value="Number..." />
-    <label for="result">Result</label>
-    <input type="button" name="result" id="result" value="Result" />
-    <script src="js/index.js"></script>
+    <label for="number2" class="visually-hidden">Second number</label>
+    <input
+      type="text"
+      name="number2"
+      id="number2"
+      oninput="calculate()"
+      placeholder="Number..."
+      required
+    />
+    <label for="result" class="visually-hidden">Result</label>
+    <input
+      type="button"
+      name="result"
+      id="result"
+      value="="
+      onclick="calculate()"
+      required
+    />
+    <p id="output">[Result]</p>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
